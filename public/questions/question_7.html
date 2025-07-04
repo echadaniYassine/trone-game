@@ -2,38 +2,31 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <title>سؤال في طريق العرش</title>
+    <meta charset="UTF-8" />
+    <title>🛡️ طريق العرش - سؤال</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            background-color: #111;
-            color: #eee;
-            padding: 40px;
-            text-align: center;
+        @keyframes fadeInUp {
+            0% { opacity: 0; transform: translateY(40px); }
+            100% { opacity: 1; transform: translateY(0); }
         }
-        .container {
-            border: 2px solid #444;
-            border-radius: 15px;
-            padding: 30px;
-            max-width: 600px;
-            margin: auto;
-            background-color: #222;
-            box-shadow: 0 0 20px #555;
-        }
-        h1 {
-            color: gold;
-            font-size: 2em;
-        }
-        p {
-            font-size: 1.4em;
+        .fade-in {
+            animation: fadeInUp 0.8s ease-out forwards;
         }
     </style>
 </head>
-<body>
-    <div class="container">
-        <h1>🛡️ سباق العقول - طريق العرش 🛡️</h1>
-        <p>من هو قائد معركة الكرامة سنة 1968؟</p>
+<body class="bg-gray-900 text-gray-100 min-h-screen flex items-center justify-center px-4 py-8">
+    <div class="bg-gray-800 border-2 border-yellow-500 rounded-3xl shadow-2xl max-w-xl w-full p-8 text-center fade-in">
+        <h1 class="text-2xl md:text-3xl font-bold text-yellow-400 mb-6 animate-pulse">
+            🛡️ سباق العقول - طريق العرش 🛡️
+        </h1>
+        <p class="text-xl md:text-2xl font-medium leading-relaxed text-white mb-8">من هو قائد معركة الكرامة سنة 1968؟</p>
+        <div class="rounded-xl p-4 mt-4 border border-teal-500/30 bg-teal-500/10">
+            <p class="text-teal-300 font-semibold text-lg">
+                🎯 تذكّر: كل خطوة تقرّبك من العرش... فكر بذكاء وانطلق للفوز!
+            </p>
+        </div>
     </div>
 </body>
 </html>
