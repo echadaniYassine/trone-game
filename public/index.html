@@ -2,59 +2,103 @@
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8" />
-  <title>سباق العقول - قائمة الأسئلة</title>
+  <title>🧠 منصة سباق العقول</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
-      font-family: Arial, sans-serif;
-      background: #111;
-      color: #eee;
-      padding: 40px;
-      max-width: 600px;
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #0d0d0d;
+      color: #f1f1f1;
+      padding: 2rem;
+    }
+
+    h1 {
+      text-align: center;
+      color: gold;
+      font-size: 2.2rem;
+      margin-bottom: 2rem;
+    }
+
+    .games-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      max-width: 1200px;
       margin: auto;
     }
-    h1 {
-      color: gold;
+
+    .game-card {
+      background-color: #1a1a1a;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 0 12px rgba(255, 215, 0, 0.15);
+      transition: transform 0.2s ease-in-out;
       text-align: center;
     }
-    ul {
-      list-style-type: none;
-      padding: 0;
+
+    .game-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 15px rgba(255, 215, 0, 0.3);
     }
-    li {
-      margin: 10px 0;
-      background: #222;
-      padding: 15px;
-      border-radius: 8px;
-    }
-    a {
+
+    .game-title {
+      font-size: 1.5rem;
       color: #0af;
-      text-decoration: none;
-      font-size: 1.2em;
+      margin-bottom: 10px;
     }
-    a:hover {
-      text-decoration: underline;
+
+    .game-desc {
+      font-size: 1rem;
+      color: #ccc;
+      margin-bottom: 20px;
+    }
+
+    .game-btn {
+      display: inline-block;
+      padding: 10px 20px;
+      background: gold;
+      color: #111;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+    }
+
+    .game-btn:hover {
+      background: #e6b800;
     }
   </style>
 </head>
 <body>
-  <h1>🛡️ سباق العقول - قائمة الأسئلة 🛡️</h1>
-  <ul>
-    <li><a href="questions/question_1.html">ما اسم العالم الذي أضاف الصفر إلى النظام العددي؟</a></li>
-    <li><a href="questions/question_2.html">ما الدولة التي تحتوي على أكبر عدد من الجزر؟</a></li>
-    <li><a href="questions/question_3.html">من هو مؤسس علم الاجتماع؟</a></li>
-    <li><a href="questions/question_4.html">في أي سنة تم نفي الملك محمد الخامس إلى كورسيكا؟</a></li>
-    <li><a href="questions/question_5.html">ما اسم الاتفاق الذي تم بموجبه تقسيم فلسطين عام 1947؟</a></li>
-    <li><a href="questions/question_6.html">ما اسم المنظمة التي تأسست عام 1964 لتمثيل الشعب الفلسطيني؟</a></li>
-    <li><a href="questions/question_7.html">من هو قائد معركة الكرامة سنة 1968؟</a></li>
-    <li><a href="questions/question_8.html">كم عدد آيات سورة البقرة؟</a></li>
-    <li><a href="questions/question_9.html">ما هو التفسير الصحيح لمعنى 'الكوثر' في القرآن؟</a></li>
-    <li><a href="questions/question_10.html">من هو الصحابي الذي كتب صلح الحديبية؟</a></li>
-    <li><a href="questions/question_11.html">ما هي السورة التي نزلت كاملة دفعة واحدة؟</a></li>
-    <li><a href="questions/question_12.html">من هو أول من جهر بالقرآن في مكة؟</a></li>
-    <li><a href="questions/question_13.html">من هو اللاعب الذي سجل أكبر عدد من الأهداف في تاريخ كأس العالم؟</a></li>
-    <li><a href="questions/question_14.html">ما اسم أول دولة عربية شاركت في كأس العالم؟</a></li>
-    <li><a href="questions/question_15.html">ما النادي الأكثر تتويجاً بدوري أبطال أوروبا؟</a></li>
-    <li><a href="questions/question_16.html">لديك 3 مفاتيح و3 أبواب مغلقة، لكن لا تعلم أي مفتاح يفتح أي باب. كم محاولة تحتاجها لتتأكد؟</a></li>
-  </ul>
+  <h1>🎮 منصة سباق العقول</h1>
+
+  <div class="games-container">
+
+    <!-- Game Card: طريق العرش -->
+    <div class="game-card">
+      <div class="game-title">🛡️ طريق العرش</div>
+      <div class="game-desc">لعبة تنافسية لفِرق الذكاء والإبداع... من يربح العرش في نهاية طريق الـ40 سؤالاً؟</div>
+      <a href="questions/question_1.html" class="game-btn">ابدأ التحدي</a>
+    </div>
+
+    <!-- Game Card Placeholder -->
+    <div class="game-card">
+      <div class="game-title">🧩 لعبة الألغاز المنطقية</div>
+      <div class="game-desc">قريباً... اختبر ذكاءك في مجموعة من الألغاز المنطقية الصعبة والمتنوعة.</div>
+      <a href="#" class="game-btn" style="pointer-events: none; opacity: 0.6;">قريباً</a>
+    </div>
+
+    <!-- Game Card Placeholder -->
+    <div class="game-card">
+      <div class="game-title">🏕️ تحدي التخييم</div>
+      <div class="game-desc">قريباً... هل تمتلك مهارات النجاة والتخييم؟ جرب واختبر معلوماتك.</div>
+      <a href="#" class="game-btn" style="pointer-events: none; opacity: 0.6;">قريباً</a>
+    </div>
+
+  </div>
 </body>
 </html>
