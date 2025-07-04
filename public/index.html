@@ -1,104 +1,74 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
-<head>
-  <meta charset="UTF-8" />
-  <title>🧠 منصة سباق العقول</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <style>
-    * {
-      box-sizing: border-box;
-    }
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>منصة سباق العقول 🧠</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      @keyframes fadeInUp {
+        0% {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
 
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: #0d0d0d;
-      color: #f1f1f1;
-      padding: 2rem;
-    }
+      .fade-in-up {
+        animation: fadeInUp 0.8s ease-out forwards;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-900 text-gray-100 min-h-screen p-6">
+    <h1 class="text-3xl md:text-4xl font-bold text-center text-yellow-400 mb-10 fade-in-up">
+      🎮 منصة سباق العقول
+    </h1>
 
-    h1 {
-      text-align: center;
-      color: gold;
-      font-size: 2.2rem;
-      margin-bottom: 2rem;
-    }
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
 
-    .games-container {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 20px;
-      max-width: 1200px;
-      margin: auto;
-    }
+      <!-- Game Card: طريق العرش -->
+      <div class="bg-gray-800 p-6 rounded-2xl shadow-lg hover:scale-105 transition transform duration-300 fade-in-up">
+        <h2 class="text-xl font-semibold text-blue-400 mb-2">🛡️ طريق العرش</h2>
+        <p class="text-gray-300 mb-4 text-sm leading-relaxed">
+          لعبة تنافسية لفِرق الذكاء والإبداع... من يربح العرش في نهاية طريق الـ40 سؤالاً؟
+        </p>
+        <a href="questions/question_1.html"
+           class="inline-block mt-2 px-4 py-2 bg-yellow-400 text-gray-900 rounded-lg font-bold hover:bg-yellow-300 transition duration-300">
+          ابدأ التحدي
+        </a>
+      </div>
 
-    .game-card {
-      background-color: #1a1a1a;
-      padding: 20px;
-      border-radius: 15px;
-      box-shadow: 0 0 12px rgba(255, 215, 0, 0.15);
-      transition: transform 0.2s ease-in-out;
-      text-align: center;
-    }
+      <!-- Game Card: الألغاز -->
+      <div class="bg-gray-800 p-6 rounded-2xl shadow-lg opacity-70 hover:scale-105 transition transform duration-300 fade-in-up">
+        <h2 class="text-xl font-semibold text-purple-400 mb-2">🧩 الألغاز المنطقية</h2>
+        <p class="text-gray-300 mb-4 text-sm leading-relaxed">
+          قريباً... اختبر ذكاءك في مجموعة من الألغاز المنطقية الصعبة والمتنوعة.
+        </p>
+        <button disabled
+           class="inline-block mt-2 px-4 py-2 bg-gray-600 text-gray-300 rounded-lg font-bold cursor-not-allowed">
+          قريباً
+        </button>
+      </div>
 
-    .game-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 0 15px rgba(255, 215, 0, 0.3);
-    }
+      <!-- Game Card: التخييم -->
+      <div class="bg-gray-800 p-6 rounded-2xl shadow-lg opacity-70 hover:scale-105 transition transform duration-300 fade-in-up">
+        <h2 class="text-xl font-semibold text-green-400 mb-2">🏕️ تحدي التخييم</h2>
+        <p class="text-gray-300 mb-4 text-sm leading-relaxed">
+          قريباً... هل تمتلك مهارات النجاة والتخييم؟ جرب واختبر معلوماتك.
+        </p>
+        <button disabled
+           class="inline-block mt-2 px-4 py-2 bg-gray-600 text-gray-300 rounded-lg font-bold cursor-not-allowed">
+          قريباً
+        </button>
+      </div>
 
-    .game-title {
-      font-size: 1.5rem;
-      color: #0af;
-      margin-bottom: 10px;
-    }
-
-    .game-desc {
-      font-size: 1rem;
-      color: #ccc;
-      margin-bottom: 20px;
-    }
-
-    .game-btn {
-      display: inline-block;
-      padding: 10px 20px;
-      background: gold;
-      color: #111;
-      text-decoration: none;
-      border-radius: 8px;
-      font-weight: bold;
-    }
-
-    .game-btn:hover {
-      background: #e6b800;
-    }
-  </style>
-</head>
-<body>
-  <h1>🎮 منصة سباق العقول</h1>
-
-  <div class="games-container">
-
-    <!-- Game Card: طريق العرش -->
-    <div class="game-card">
-      <div class="game-title">🛡️ طريق العرش</div>
-      <div class="game-desc">لعبة تنافسية لفِرق الذكاء والإبداع... من يربح العرش في نهاية طريق الـ40 سؤالاً؟</div>
-      <a href="questions/question_1.html" class="game-btn">ابدأ التحدي</a>
     </div>
 
-    <!-- Game Card Placeholder -->
-    <div class="game-card">
-      <div class="game-title">🧩 لعبة الألغاز المنطقية</div>
-      <div class="game-desc">قريباً... اختبر ذكاءك في مجموعة من الألغاز المنطقية الصعبة والمتنوعة.</div>
-      <a href="#" class="game-btn" style="pointer-events: none; opacity: 0.6;">قريباً</a>
-    </div>
-
-    <!-- Game Card Placeholder -->
-    <div class="game-card">
-      <div class="game-title">🏕️ تحدي التخييم</div>
-      <div class="game-desc">قريباً... هل تمتلك مهارات النجاة والتخييم؟ جرب واختبر معلوماتك.</div>
-      <a href="#" class="game-btn" style="pointer-events: none; opacity: 0.6;">قريباً</a>
-    </div>
-
-  </div>
-</body>
+    <footer class="text-center text-sm text-gray-500 mt-16 fade-in-up">
+      🚀 مشروع تعليمي بإبداع ياسين 💡
+    </footer>
+  </body>
 </html>
